@@ -1,13 +1,13 @@
 import React from "react";
-import { Header } from "../src/components/Header";
+import { Header } from "./components/Header";
 
-import { Header } from "components/Header";
+import "./style.css";
 
 const App = () => {
   return (
     <>
       <Header />
-      <h1>
+      <h1 className="app">
         Welcome to React App thats build using Webpack and Babel separately
       </h1>
     </>

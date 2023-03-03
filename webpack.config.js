@@ -16,7 +16,7 @@ module.exports = {
     liveReload: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".jsx", ".json", ".tsx", ".ts", ".css"],
     alias: {
       components: path.resolve(__dirname, "src/components/"),
     },
@@ -29,7 +29,15 @@ module.exports = {
         use: "babel-loader",
       },
 
-      { test: /\.ts$/, use: "ts-loader" },
+      { test: /\.(ts$|tsx)/, exclude: /node_modules/, use: "ts-loader" },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" },
+        ],
+      },
     ],
   },
 };
