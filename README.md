@@ -1,4 +1,4 @@
-# React ap without CRA
+# React app without CRA
 
 Application for training Webpack skills
 
